@@ -39,3 +39,64 @@ Step 1: Creating our Lambda Function
 Per our use-case, our Lambda will need to be triggered by the creation of an SQS queue message. We already set up that SQS queue in our previous article therefore, we will not go in-depth here on how to set up an SQS queue.
 
 This Lambda will then need to publish the received SQS message to an SNS topic, which should notify our in-house fulfillment of a new customer order for processing.
+
+From our Lambda console, we click, “Create Function”. We give our function a name, select Python 3.9, the default architecture, and click “Create Function”.
+
+Next, we need to edit the permissions of our Lambda so that it can access both the SQS queue and write to our SNS topic. Within our function dashboard, we click the “Configuration” sub-menu, “Permissions”, and click our “Execution Role” to be re-directed to IAM to add the needed policies to our function.
+
+The permission policies we will need for our use-case are “SNSFullAccess” and “SQSFullAccess”.
+
+Now we head back to our Lambda console and copy our python script above into our code and click “Deploy”.
+
+Next, we need to configure our test event to ensure our lambda is working properly. Below is a JSON of our test event that mimics an SQS event to trigger our Lambda function:
+
+Again, from our Lambda function dashboard, we click, “Configure test event”.
+
+We give our test event a name. For our use-case, we will make it private and paste in our JSON test event from above. Click “Save”.
+
+Now with our Lambda function coded, configured with the proper permissions, and our test event ready, we click “Test” to test our Lambda.
+
+We recieve a “200” success status code and a message informing us that our customer order has been sent to an SNS topic for fufillment.
+
+We can verify that our Lambda processed the message in our SQS queue and submitted the information via a message to our SNS topic by visiting our SNS dashboard
+
+Our fulfillment team has a subscription to messages that are sent to our “Order” topic in SNS and are notified via email when a new message is posted.
+
+We can check our company email to ensure that our SNS topic was configured correctly by Lambda by checking an email that was subscribed to the SNS topic:
+
+Step 2: Create A Lambda that Time Stamps SNS Messages and Stores it in a DynamoDB Table
+Once again, we head to the Lambda dashboard to create our function
+
+
+As in our previous Lambdas, we need to give our function the correct permissions to pull messages from our SNS topic and to create DynamoDB tables
+
+We need to configure our test event. Below is a JSON for our test event
+
+
+We configure the event in the same way with our previous Lambda
+
+This Lambda function is triggered by an SNS topic and extracts relevant information from the SNS message, which is then stored in a DynamoDB table.
+
+The function generates a unique identifier for each record, adds a timestamp to indicate when the message was posted, and converts the timestamp from epoch time to human-readable format.
+
+We can paste our code into our Lambda function, click “Deploy” and run our test event:
+
+We receive a successful result:
+
+
+We can then verify the results by visiting our DynamoDB Dashboard
+
+
+Step 4: Test and Verify our Entire Serverless Application
+Starting in the API gateway, we once again test our API to see our application run from start all the way through. We run one more test in our API
+
+
+And confirm that an SQS queue was created
+
+
+And confirm that our SNS is triggering by seeing if we received an email
+
+
+Finally, we check our DynamoDB Table one last time to see the timestamp and log of our orders
+
+
