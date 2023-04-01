@@ -59,6 +59,8 @@ Now we head back to our Lambda console and copy our python script above into our
 
 Next, we need to configure our test event to ensure our lambda is working properly. Below is a JSON of our test event that mimics an SQS event to trigger our Lambda function:
 
+<img width="1149" alt="Screenshot 2023-04-01 at 19 19 40" src="https://user-images.githubusercontent.com/67044030/229310156-25fc0658-4b48-4fa1-91bd-ae5ebd201e19.png">
+
 Again, from our Lambda function dashboard, we click, “Configure test event”.
 
 We give our test event a name. For our use-case, we will make it private and paste in our JSON test event from above. Click “Save”.
