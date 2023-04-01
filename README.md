@@ -46,6 +46,8 @@ From our Lambda console, we click, “Create Function”. We give our function a
 
 <img width="1249" alt="Screenshot 2023-04-01 at 19 13 39" src="https://user-images.githubusercontent.com/67044030/229309991-830ac584-6fd8-4e37-b5ca-25d28ebae4f6.png">
 
+<img width="1240" alt="Screenshot 2023-04-01 at 19 14 25" src="https://user-images.githubusercontent.com/67044030/229310028-fc649b51-7e7d-455c-8353-ae1537df92be.png">
+
 Next, we need to edit the permissions of our Lambda so that it can access both the SQS queue and write to our SNS topic. Within our function dashboard, we click the “Configuration” sub-menu, “Permissions”, and click our “Execution Role” to be re-directed to IAM to add the needed policies to our function.
 
 The permission policies we will need for our use-case are “SNSFullAccess” and “SQSFullAccess”.
