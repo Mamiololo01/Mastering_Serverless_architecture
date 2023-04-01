@@ -23,8 +23,13 @@ In this article, we are going to continue to build our a more robust serverless 
 Let’s jump right in!
 
 Prerequisites
+
 Understanding of AWS services, especially API Gateway, Lambda, SQS, SNS, and DynamoDB
+
 Experience with coding in Python
+
 Familiarity with event-driven architectures
+
 Knowledge of NoSQL databases
+
 Understanding of serverless architecture principles
