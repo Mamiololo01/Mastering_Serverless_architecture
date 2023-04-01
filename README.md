@@ -53,6 +53,7 @@ Next, we need to edit the permissions of our Lambda so that it can access both t
 <img width="1216" alt="Screenshot 2023-04-01 at 19 14 46" src="https://user-images.githubusercontent.com/67044030/229310089-9505eabe-92dd-4fc2-9778-00f8a450e7e2.png">
 
 The permission policies we will need for our use-case are “SNSFullAccess” and “SQSFullAccess”.
+<img width="922" alt="Screenshot 2023-04-01 at 19 17 29" src="https://user-images.githubusercontent.com/67044030/229310107-b8343549-90ff-47f2-be81-feff22dfdd7d.png">
 
 Now we head back to our Lambda console and copy our python script above into our code and click “Deploy”.
 
