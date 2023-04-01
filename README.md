@@ -63,6 +63,8 @@ Next, we need to configure our test event to ensure our lambda is working proper
 
 Again, from our Lambda function dashboard, we click, “Configure test event”.
 
+<img width="1229" alt="Screenshot 2023-04-01 at 19 24 41" src="https://user-images.githubusercontent.com/67044030/229310187-670a0c26-8fc7-496c-acb1-fcdcdea6bedd.png">
+
 We give our test event a name. For our use-case, we will make it private and paste in our JSON test event from above. Click “Save”.
 
 Now with our Lambda function coded, configured with the proper permissions, and our test event ready, we click “Test” to test our Lambda.
