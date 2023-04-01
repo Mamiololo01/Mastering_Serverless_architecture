@@ -33,3 +33,9 @@ Familiarity with event-driven architectures
 Knowledge of NoSQL databases
 
 Understanding of serverless architecture principles
+
+Step 1: Creating our Lambda Function
+
+Per our use-case, our Lambda will need to be triggered by the creation of an SQS queue message. We already set up that SQS queue in our previous article therefore, we will not go in-depth here on how to set up an SQS queue.
+
+This Lambda will then need to publish the received SQS message to an SNS topic, which should notify our in-house fulfillment of a new customer order for processing.
