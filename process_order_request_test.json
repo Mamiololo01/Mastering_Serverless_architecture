@@ -1,0 +1,20 @@
+{
+  "Records": [
+    {
+      "messageId": "1",
+      "receiptHandle": "SQS-RECEIPT-HANDLE",
+      "body": "{\"QueueName\": \"CustomerOrders\", \"Order\": {\"OrderId\": \"12345\", \"Product\": \"iPhone\", \"Quantity\": 2}}",
+      "attributes": {
+        "ApproximateReceiveCount": "1",
+        "SentTimestamp": "1622019617990",
+        "SenderId": "123456789012",
+        "ApproximateFirstReceiveTimestamp": "1622019617995"
+      },
+      "messageAttributes": {},
+      "md5OfBody": "7b270e59b47ff90a553787216d55d91d",
+      "eventSource": "aws:sqs",
+      "eventSourceARN": "arn:aws:sqs:us-east-1:123456789012:CustomerOrders",
+      "awsRegion": "us-east-1"
+    }
+  ]
+}
