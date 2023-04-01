@@ -2,6 +2,8 @@
 
 How to Chain Lambda Functions in AWS for High-Performance Applications using SNS, SQS, DynamoDB &amp; two Lambda additional Lambda functions.
 
+<img width="674" alt="Screenshot 2023-04-01 at 20 13 06" src="https://user-images.githubusercontent.com/67044030/229309939-509250ec-a7ab-4713-87ef-7a1d50c298a7.png">
+
 In a previous article, I showed you how to create a serverlesss architecture using an API, Lambda Python function, and an SQS messaging queue. This combination of AWS was created with this business case in mind:
 
 Suppose your company is running a high-traffic e-commerce website that receives a large number of orders each day. To process these orders efficiently, the company can set up an API Gateway to receive incoming order requests from the website’s front-end. The API Gateway can then trigger a Lambda function, which can use the information from the order requests to create a new SQS queue.
