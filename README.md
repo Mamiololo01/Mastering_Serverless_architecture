@@ -44,6 +44,8 @@ This Lambda will then need to publish the received SQS message to an SNS topic, 
 
 From our Lambda console, we click, “Create Function”. We give our function a name, select Python 3.9, the default architecture, and click “Create Function”.
 
+<img width="1249" alt="Screenshot 2023-04-01 at 19 13 39" src="https://user-images.githubusercontent.com/67044030/229309991-830ac584-6fd8-4e37-b5ca-25d28ebae4f6.png">
+
 Next, we need to edit the permissions of our Lambda so that it can access both the SQS queue and write to our SNS topic. Within our function dashboard, we click the “Configuration” sub-menu, “Permissions”, and click our “Execution Role” to be re-directed to IAM to add the needed policies to our function.
 
 The permission policies we will need for our use-case are “SNSFullAccess” and “SQSFullAccess”.
